@@ -6,7 +6,7 @@ task :post do
   date = DateTime.now.strftime("%Y-%m-%d")
   title = ENV['title'] || "empty title"
 
-  filename = title.gsub(" ", "-")
+  filename = title.downcase.strip.gsub(" ", "-")
   filename = date + "-" + filename + ".markdown"
 
   File.open("_posts/#{filename}", "w") do |file|
