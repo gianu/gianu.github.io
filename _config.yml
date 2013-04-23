@@ -4,7 +4,7 @@ permalink: /post/:title
 auto: true
 rdiscount:
   extensions: [smart]
-
+exclude: [vendor, .bundle]
 name: Sergio Gianazza
 url: http://gianu.me
 description: The magic trip of a Psychonaut.
