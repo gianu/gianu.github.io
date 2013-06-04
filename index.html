@@ -1,14 +1,25 @@
 ---
 layout: layout
 title: "Posts"
+search: "true"
+exclude_from_search: true
 ---
 
-<section class="content">
-  <ul class="listing">
-    {% for post in site.posts %}
-      <li>
-        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+<ul class="blog-posts">
+  {% for post in site.posts %}
+  {% if forloop.first %}
+    {% assign class="first" %}
+  {% else if forloop.last %}
+    {% assign class="last" %}
+  {% else %}
+    {% assign class="" %}
+  {% endif %}
+  <li class="{{ class }}">
+    <article class="blog-post">
+      <div class="published">{{ post.date | date: "%B %e, %Y" }}</div>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1> 
+      <p>{{ post.excerpt | emojify }}<a href="{{ post.url }}">more</a></p>
+    </article>
+  </li>
+  {% endfor %}
+</ul>

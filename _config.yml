@@ -5,9 +5,12 @@ auto: true
 rdiscount:
   extensions: [smart]
 exclude: [vendor, .bundle]
-name: Sergio Gianazza
+name: Sergio Rafael Gianazza
 url: http://gianu.me
 description: The magic trip of a Psychonaut.
 twitter: sgianazza
 github: gianu
 gravatar_url: http://www.gravatar.com/avatar/1eb5eb46d5a4289d3528426b1626c2bb.png
+emoji_dir: http://a248.e.akamai.net/assets.github.com/images/icons/emoji/
+lunr_excludes: [atom.xml]
+# emoji_dir: /images/emoji/

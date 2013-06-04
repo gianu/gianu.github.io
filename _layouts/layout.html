@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <title>
@@ -11,46 +14,151 @@
 
     <meta name="author" content="{{ site.name }}" />
     <meta name="description" content="{{ site.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-
-    <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-    <link media="only screen and (max-device-width: 480px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
-    <link media="only screen and (device-width: 768px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|PT+Serif|Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css" />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/socialicons.css" rel="stylesheet">
+    <link href="/css/glyphicons.css" rel="stylesheet">
+    <link href="/css/halflings.css" rel="stylesheet">
+    <link href="/css/template.css" rel="stylesheet">
+    <link href="/css/colors/color-classic.css" rel="stylesheet" id="colorcss">
+    <link href="/css/application.css" rel="stylesheet">
+
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/application.js"></script>
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
   </head>
-
   <body>
-    <section class="sidebar">
-      <a href="/">
-        <img src="{{ site.gravatar_url }}?s=150" height="75" width="75" class="avatar" />
-      </a>
+    <div class="container">
+      <div class="masthead clearfix">
+        <!-- The Logo -->
+        <a href="index.html"><img id="logo" src="/images/gianulogo@2x.png" alt="gianu.me"/></a>
 
-      <section class="name">
-        <a href="/">
-          <span id="fname">{{ site.name|split:' '|first }}</span>
-          <span id="lname">{{ site.name|split:' '|last }}</span>
-        </a>
-      </section>
-
-      <section class="meta">
-        <a href="https://github.com/{{ site.github }}" target="_blank"><img src="/images/github.png" /></a>
-        <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="/images/twitter.png" /></a>
-        <a href="/atom.xml"><img src="/images/rss.png" /></a>
-      </section>
-
-      <section class="sections">
-        <ul>
-          <li><a href="/about.html">about</a></li>
-          <li><a href="/">posts</a></li>
+        <!-- The Navigation -->
+        <ul id="nav" class="nav ww-nav pull-right hidden-phone">
+          <li><a href="/index.html">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/atom.xml">Feed</a></li>
         </ul>
-      </section>
-    </section>
-    {{ content }}
+      </div>
+
+      <hr>
+
+      <div class="row main-content">
+        {% if page.search == "true" %}
+          {% assign class = "offset1" %}
+        {% else %}
+          {% assign class= "offset3" %}
+          {% endif %}
+        <div class="{{ class }} span6 zone-content">
+          {{ content }}
+        </div>
+
+        {% if page.search == "true" %}
+          <aside id="aside-right" class="aside-column offset1 span3">
+            <article class="widget-search-form widget">
+            <header>
+            <h1>Search</h1>
+            </header>
+            <form action="/search" class="search-form" method="get">    
+              <fieldset>
+                <input id="search-query" name="q" type="text" placeholder="Search" autocomplete="off">
+                <!-- <button type="submit" class="button-icon"><i class="glyphicons-icon search white"></i></button> -->
+                <!-- <button type="submit">Go</button> -->
+              </fieldset>
+            </form>
+            <section id="search-results" style="display:none;">
+              <p>Search results</p>
+              <div class="entries">
+              </div>
+            </section>
+            </article>
+          </aside>
+        {% endif %}
+
+    </div>
+
+    <hr>
+    <div class="row triple-row">
+      <div id="triple-first" class="span4 triple">
+        <div class="zone zone-triple-first">
+          <article class="widget-triple-first widget-html-widget widget">
+            <header>
+              <h1>About Me</h1>
+            </header>
+            <p>I'm a Software Craftsman, co-founder of <a href="http://www.ideasagiles.com">Ideas Agiles</a>.
+            I'm passionate for music, love to make noises with my guitar.</p>
+          </article>
+        </div>
+      </div>
+      <div id="triple-second" class="span4 triple">
+        <div class="zone zone-triple-second">
+          <article class="widget-triple-second widget-html-widget widget">
+            <header>
+              <h1>What are you going to find here?</h1>
+            </header>
+            <p>Articles regarding technology, music, rants, thoughts.
+            Both in Spanish and English (I'm a spanish native speaker, so forgive me if my english is not the best)</p>
+          </article>
+        </div>
+      </div>
+      <div id="triple-third" class="span4 triple">
+        <div class="zone zone-triple-third">
+          <article class="widget-triple-third widget-html-widget widget">
+          <header>
+          <h1>Also in...</h1>
+          </header>
+          <p>
+            <a href="http://twitter.com/{{ site.twitter }}"><i class="smicon-twitter"></i></a>
+            <a href="http://facebook.com/sgianazza"><i class="smicon-facebook"></i></a>
+            <a href="http://github.com/{{ site.facebook }}"><i class="smicon-github"></i></a>
+            <a href="http://linkedin.com/in/sgianazza"><i class="smicon-linkedin"></i></a>
+            <a href="mailto:sgianazza@gmail.com"><i class="smicon-mail"></i></a>
+          </p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="copyright span12">Copyright 2013 - {{ site.name }}</div>  
+    </div>
+
+    {% raw %}
+      <script id="search-results-template" type="text/mustache">
+        {{#entries}}
+        <article>
+          <h3>
+            {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+            <a href="{{url}}">{{title}}</a>
+          </h3>
+        </article>
+        {{/entries}}
+      </script>
+    {% endraw %}
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" charset="utf-8"></script>
+    <script src="/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="/js/tinynav.min.js" charset="utf-8"></script>
+    <script src="/js/template.js" charset="utf-8"></script>
+    <script src="/js/lunr.min.js" charset="utf-8"></script>
+    <script src="/js/mustache.js" charset="utf-8"></script>
+    <script src="/js/date.format.js" charset="utf-8"></script>
+    <script src="/js/URI.min.js" charset="utf-8"></script>
+    <script src="/js/jquery.lunr.search.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/application.js" charset="utf-8"></script>
   </body>
 </html>
