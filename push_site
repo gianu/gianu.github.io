@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export LC_ALL=en_US.UTF8
+bundle exec jekyll build
+
+cp _site/search.json .
+git add search.json
+git commit -m "Automatically add search.json"
+git push origin master
