@@ -2,6 +2,7 @@ markdown: rdiscount
 pygments: true
 permalink: /post/:title
 auto: true
+paginate: 5
 rdiscount:
   extensions: [smart]
 exclude: [vendor, .bundle]
@@ -13,4 +14,3 @@ github: gianu
 gravatar_url: http://www.gravatar.com/avatar/1eb5eb46d5a4289d3528426b1626c2bb.png
 emoji_dir: http://a248.e.akamai.net/assets.github.com/images/icons/emoji/
 lunr_excludes: [atom.xml]
-# emoji_dir: /images/emoji/
