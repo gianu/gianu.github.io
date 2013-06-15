@@ -6,6 +6,6 @@ bundle exec jekyll build
 
 cp _site/search.json .
 
-git add search.json
-git commit -m "Automatically add search.json"
+git add search.json js/application.js
+git commit -m "Automatically add search.json and update js/application.js"
 git push origin master
