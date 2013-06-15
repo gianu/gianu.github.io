@@ -1,6 +1,3 @@
----
----
-
 # Your javascript
 $ ->
   $('#search-query').lunrSearch

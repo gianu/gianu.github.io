@@ -1,6 +1,6 @@
 require 'date'
 
-task default: [:post]
+task default: [:compile]
 
 task :post do
   date = DateTime.now.strftime("%Y-%m-%d")
@@ -17,4 +17,15 @@ task :post do
   end
 
   puts "Post #{filename} created"
+end
+
+task :compile do
+  pids = [
+    spawn("coffee -b -o js -c assets/*.coffee")
+  ]
+
+  trap "INT" do
+    Process.kill "INT", *pids
+    exit 1
+  end
 end
