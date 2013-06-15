@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "title": "Not Found",
+      "url": "/404.html",
+      "date": null,
+      "categories": [
+
+      ],
+      "body": "The Magic ends here"
+    },
+    {
+      "title": "About Me",
+      "url": "/about.html",
+      "date": null,
+      "categories": [
+
+      ],
+      "body": "TO BE COMPLETED..."
+    },
+    {
+      "title": "Contact",
+      "url": "/contact.html",
+      "date": null,
+      "categories": [
+
+      ],
+      "body": "If you want to, you can reach me through:  And last, but not least, if you want to give me a present you can pick one book from my Amazon Kindle Wishlist"
+    },
+    {
+      "title": "Introducing Software Psychonaut",
+      "url": "/post/introducing-software-psychonaut",
+      "date": "2013-06-04 00:00:00 -0300",
+      "categories": [
+
+      ],
+      "body": "Hello, my name is Sergio and this is my personal Blog, a humble creation that I expect to grow over time. Don’t expect to see serious things here, I will be talking about my experience on Software Development (with a lot of emphasis on Ruby), and ohter related stuffs. By related I mean no-so-related things :stuck_out_tongue:. Maybe I will talk about music, maybe about programming and maybe about gaming. Given that I’m a Spanish speaker, sometimes you will find some article written in Spanish, just for the sake of clarity. Talking about that, If you understand Spanish and want to enjoy 20 minutes of talks about the everyday life of software development, don’t miss the Ideas Ágiles' podcast at: http://www.ideasagiles.com/podcast That’s it for today, hope to see you reading this blog again in the near future!"
+    }
+  ]
+}
