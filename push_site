@@ -1,24 +1,25 @@
 #!/bin/sh
 
-echo  "Removing legacy _site"
+echo  " ================= Removing legacy _site ========================"
 rm -rf _site
-echo "Done."
+echo " ==================           Done.       ========================"
 
-echo "compiling and building site"
-export LC_ALL=en_US.UTF8
+echo " ================== Compiling and building site =================="
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 bundle exec rake compile
 bundle exec jekyll build
-echo "Done."
+echo " ==================           Done.             =================="
 
-echo "copying search.json"
+echo " ==================     copying search.json     =================="
 cp -f _site/search.json .
-echo "Done."
+echo " ==================           Done.             =================="
 
-echo "Adding search.json and js/application.js"
+echo " ================== Adding search.json and js/application.js ====="
 git add search.json js/application.js
-echo "done"
+echo " ==================           Done. =============================="
 
-echo "Committing and pushing changes"
+echo " ==================  Committing and pushing changes ============="
 git commit -m "Automatically add search.json and update js/application.js"
 git push origin master
-echo "Done! The site is published"
+echo " ==================  Done! The site is published ================"
