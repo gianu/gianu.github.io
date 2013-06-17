@@ -32,7 +32,7 @@
 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="/js/modernizr.js" type="text/javascript"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
     <div class="container">
       <div class="masthead clearfix">
         <!-- The Logo -->
-        <a href="index.html"><img id="logo" src="/images/gianulogo@2x.png" alt="gianu.me"/></a>
+        <a href="/index.html"><img id="logo" src="/images/gianulogo@2x.png" alt="gianu.me"/></a>
 
         <!-- The Navigation -->
         <ul id="nav" class="nav ww-nav pull-right hidden-phone">
@@ -61,7 +61,7 @@
           {% assign class = "offset1" %}
         {% else %}
           {% assign class= "offset3" %}
-          {% endif %}
+        {% endif %}
         <div class="{{ class }} span6 zone-content">
           {{ content }}
         </div>

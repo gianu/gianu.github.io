@@ -7,13 +7,13 @@ exclude_from_search: true
 
 <ul class="blog-posts">
   {% for post in site.posts %}
-  {% if forloop.first %}
-    {% assign class="first" %}
-  {% else if forloop.last %}
-    {% assign class="last" %}
-  {% else %}
-    {% assign class="" %}
-  {% endif %}
+    {% if forloop.first %}
+      {% assign class="first" %}
+    {% else if forloop.last %}
+      {% assign class="last" %}
+    {% else %}
+      {% assign class="" %}
+    {% endif %}
   <li class="{{ class }}">
     <article class="blog-post">
       <div class="published">{{ post.date | date: "%B %e, %Y" }}</div>
@@ -21,7 +21,7 @@ exclude_from_search: true
       <div>
         {{ post.content }}
       </div>
-      <a href="{{ post.url }}">Permalink...</a>
+      <a href="{{ post.url }}">Comments & Permalink...</a>
     </article>
   </li>
   {% endfor %}
