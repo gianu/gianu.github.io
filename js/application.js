@@ -9,6 +9,6 @@ $(function() {
   return $('.blog-post').emojify({
     width: '24px',
     height: '24px',
-    emoji_dir: "https://s3.amazonaws.com/softwarepsychonaut/emoji"
+    emoji_dir: 'https://s3.amazonaws.com/softwarepsychonaut/emoji'
   });
 });

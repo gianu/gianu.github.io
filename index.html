@@ -14,15 +14,15 @@ exclude_from_search: true
     {% else %}
       {% assign class="" %}
     {% endif %}
-  <li class="{{ class }}">
-    <article class="blog-post">
+    <li class="{{ class }}">
+    <div id="{{ post.title }}" class="blog-post">
       <div class="published">{{ post.date | date: "%B %e, %Y" }}</div>
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
       <div>
         {{ post.content }}
       </div>
       <a href="{{ post.url }}">Comments & Permalink...</a>
-    </article>
+    </div>
   </li>
   {% endfor %}
 </ul>

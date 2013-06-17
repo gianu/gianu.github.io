@@ -1,0 +1,1 @@
+(function(a){a.fn.emojify=function(b){var c=a.extend({emoji_dir:"http://localhost/images/emoji",width:"64px",height:"64px"},b);return this.each(function(){var d=a(this);var e=d.html().replace(/:(\w+):/g,"<img width='"+c.width+"' height='"+c.heights+"' src='"+c.emoji_dir+"/$1.png'/>");d.html(e)})}})(jQuery);
