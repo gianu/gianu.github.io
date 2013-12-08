@@ -10,7 +10,11 @@ The thing get a little complicated when you're using [Firefox](http://www.firefo
 Here you have two options:
 
 Create some virtual host using [Apache](http://www.apache.org) or [Nginx](http://www.nginx.com), or
-Use the magical power of python: python -m SimpleHTTPServer
+Use the magical power of python: 
+
+```
+python -m SimpleHTTPServer
+```
 
 Last week, when I was building [something](http://www.scvsoft.com/challenge-accepted) with my friends at [SCV](http://www.scvsoft.com), I had to test if our site looks well. And I used the python solution every time.
 
