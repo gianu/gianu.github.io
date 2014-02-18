@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why I don't care about the: "Why we stop using X and moved to Y"
+title: Stop stop using X and move to Y
 ---
 
 Let's face it, every known programming language sucks. From C to Go, every existing programming language have their faults.
