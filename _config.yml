@@ -13,4 +13,5 @@ twitter: sgianazza
 github: gianu
 gravatar_url: http://www.gravatar.com/avatar/1eb5eb46d5a4289d3528426b1626c2bb.png
 gems: ['jekyll-lunr-js-search']
-lunr_excludes: [atom.xml]
+lunr_search:
+  excludes: [atom.xml]
